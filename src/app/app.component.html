@@ -1,0 +1,13 @@
+<div [dir]="textDir">
+  <app-user-header [innerDir]="textDir"></app-user-header>
+  <div class="container">
+    <div class="flexbox" [dir]="textDir">
+      <div class="flex-item1">
+        <button (click)="changeDirection()">{{'direction' | translate}}</button>
+      </div>
+      <div class="flex-item2">
+        <app-user-autocomplete></app-user-autocomplete>
+      </div>
+    </div>
+  </div>
+</div>
