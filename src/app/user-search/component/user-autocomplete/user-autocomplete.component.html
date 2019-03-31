@@ -1,0 +1,9 @@
+<div class="mat-app-background basic-container">
+  <input #userFilterInput type="text" placeholder="{{'inputUserAutocompelete' | translate}}" aria-label="select or create new" matInput
+    [formControl]="myControl" [matAutocomplete]="auto">
+  <mat-autocomplete class="matAutocomplete" #auto="matAutocomplete"  (optionSelected)="displayFn($event.option.value)" >
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+      {{option.name}}
+    </mat-option>
+  </mat-autocomplete>
+</div>
